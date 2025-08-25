@@ -18,6 +18,8 @@ const Hero = () => {
             <button onClick={() => navigate("/plan-trip")} className='bg-green-400 text-purple-900 font-bold my-2 px-6 py-2 rounded-lg hover:bg-green-500 transition duration-300'>
                 Get Started
             </button>
+
+            <img src="/assets/home-demo.png" alt="Travel Image" className="w-2/3 border-2 border-gray-300 rounded-lg mt-5" />
         </section>
     )
 }

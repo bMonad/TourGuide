@@ -63,7 +63,6 @@ const PlanTrip = () => {
       toast('Please fill all the fields.');
       return;
     }
-    console.log('Form Submitted:', formData);
 
     setLoading(true);
 

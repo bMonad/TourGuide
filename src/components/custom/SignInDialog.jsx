@@ -31,10 +31,11 @@ const SignInDialog = ({ openDialog, setOpenDialog, generateTrip }) => {
                     Accept: 'Application/json'
                 },
             });
-            console.log('User Profile:', response.data);
             localStorage.setItem('user', JSON.stringify(response.data));
             setOpenDialog(false);
-            generateTrip();
+            if (typeof generateTrip === "function") {
+                generateTrip();
+            }
         } catch (error) {
             console.error('Error fetching user profile:', error);
         }
@@ -45,7 +46,7 @@ const SignInDialog = ({ openDialog, setOpenDialog, generateTrip }) => {
             <DialogContent className="bg-black/40 backdrop-blur-sm hover:backdrop-blur-md border-[0.2px] border-gray-700 ">
                 <DialogHeader>
                     <DialogTitle className="flex place-content-center ">
-                        <img src="src/assets/tour.png" alt="Tourguide Logo" className='h-8 mb-4' />
+                        <img src="/assets/tour.png" alt="Tourguide Logo" className='h-8 mb-4' />
                     </DialogTitle>
                     <DialogDescription className="flex  flex-col text-center">
                         <span className='text-lg font-bold pb-1 text-gray-400'>Sign In With Google!</span>

@@ -6,6 +6,7 @@ import Footer from './Footer.jsx'
 import PlanTrip from '../components/pages/PlanTrip.jsx'
 import { Toaster } from 'sonner'
 import ViewTrip from '../view-trip/[tripid]/ViewTrip.jsx'
+import MyTrips from '../components/pages/my-trips/MyTrips.jsx'
 
 const Layout = () => (
     <main className='min-h-screen grid grid-rows-[1fr_auto]'>
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
             { index: true, element: <Hero /> },
             { path: 'plan-trip', element: <PlanTrip /> },
             { path: 'view-trip/:tripid', element: <ViewTrip /> },
+            { path: 'my-trips', element: <MyTrips /> },
         ],
     },
 ]);

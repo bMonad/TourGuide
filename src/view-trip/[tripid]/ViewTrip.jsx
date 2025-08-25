@@ -6,6 +6,7 @@ import InfoSection from '../components/InfoSection';
 import Hotels from '../components/Hotels';
 import Itinerary from '../components/Itinerary';
 import Footer from '../components/Footer';
+import { toast } from 'sonner';
 
 const ViewTrip = () => {
     const tripId = useParams().tripid;
@@ -17,10 +18,9 @@ const ViewTrip = () => {
             const docSnap = await getDoc(docRef);
 
             if (docSnap.exists()) {
-                console.log("Trip data:", docSnap.data());
                 setTrip(docSnap.data());
             } else {
-                console.log("No such document!");
+                toast("No such document!");
             }
         };
 

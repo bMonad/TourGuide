@@ -1,11 +1,20 @@
-import React from 'react'
+import { useState } from 'react'
 import { FiShare2 } from "react-icons/fi";
 import { Button } from '../../components/ui/button';
+import { GetPlaceDetails, PHOTO_REF_URL } from '../../service/GlobalApi';
+import { useEffect } from 'react';
+import GetPlacePhoto from './GetPlacePhoto';
 
 const InfoSection = ({ trip }) => {
+    const [photoUrl, setPhotoUrl] = useState('');
+
+    useEffect(() => {
+        trip && GetPlacePhoto(trip?.userSelection?.location?.label, setPhotoUrl);
+    }, [trip]);
+
     return (
         <div>
-            <img src='/assets/trip.jpg' alt='trip.title' className='h-[340px] w-full object-cover rounded-sm' />
+            <img src={photoUrl || '/assets/trvl.webp'} alt='trip.title' className='h-[340px] w-full object-cover rounded-sm' />
 
             <div className='flex justify-between items-center'>
                 <div className='w-full my-5 flex flex-col gap-2'>

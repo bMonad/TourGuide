@@ -25,20 +25,13 @@ async function main(promptText) {
         config,
         contents,
     });
-    // let fileIndex = 0;
+
     let resultText = '';
     for await (const chunk of response) {
         resultText += chunk.text;
     }
 
     return resultText
-
-    // try {
-    //     const json = JSON.parse(resultText);
-    //     console.log(json);
-    // } catch (e) {
-    //     console.error('Failed to parse JSON:', e, resultText);
-    // }
 }
 
 export default main;
