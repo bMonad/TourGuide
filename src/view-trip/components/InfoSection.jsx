@@ -5,9 +5,11 @@ import { useEffect } from 'react';
 import GetPlacePhoto from './GetPlacePhoto';
 import ShareButton from '../../components/custom/ShareButton';
 import DeleteButton from '../../components/custom/DeleteButton';
+import { useNavigate } from 'react-router-dom';
 
 const InfoSection = ({ trip }) => {
     const [photoUrl, setPhotoUrl] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         trip && GetPlacePhoto(trip?.userSelection?.location?.label, setPhotoUrl);
@@ -37,7 +39,7 @@ const InfoSection = ({ trip }) => {
                     <DeleteButton
                         collection="Trips"
                         docId={trip?.id}
-                        onDelete={() => { window.location.reload() }}
+                        onDelete={() => { navigate('/my-trips') }}
                     />
                     <ShareButton
                         url={window.location.href}

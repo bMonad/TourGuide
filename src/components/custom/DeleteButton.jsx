@@ -10,10 +10,10 @@ const DeleteButton = ({ collection, docId, onDelete }) => {
         try {
             await deleteDoc(doc(db, collection, docId));
             if (onDelete) onDelete();
-            toast.success("Document deleted successfully");
+            toast.success("Trip deleted successfully");
         } catch (error) {
-            console.error("Error deleting document:", error);
-            toast.error("Error deleting document");
+            console.error("Error deleting trip:", error);
+            toast.error("Error deleting trip");
         }
     };
 
