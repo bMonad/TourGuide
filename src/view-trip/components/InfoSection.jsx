@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { FiShare2 } from "react-icons/fi";
 import { Button } from '../../components/ui/button';
 import { GetPlaceDetails, PHOTO_REF_URL } from '../../service/GlobalApi';
 import { useEffect } from 'react';
 import GetPlacePhoto from './GetPlacePhoto';
+import ShareButton from '../../components/custom/ShareButton';
+import DeleteButton from '../../components/custom/DeleteButton';
 
 const InfoSection = ({ trip }) => {
     const [photoUrl, setPhotoUrl] = useState('');
@@ -32,10 +33,18 @@ const InfoSection = ({ trip }) => {
                         </h2>
                     </div>
                 </div>
-                <Button
-                    className='bg-green-100 w-[40px] mt-10 text-gray-900 rounded-full hover:bg-purple-300'>
-                    <FiShare2 />
-                </Button>
+                <div className='flex gap-3 mt-10'>
+                    <DeleteButton
+                        collection="Trips"
+                        docId={trip?.id}
+                        onDelete={() => { window.location.reload() }}
+                    />
+                    <ShareButton
+                        url={window.location.href}
+                        title="My Trip"
+                        text="Check out my travel plan on Tour Guide!"
+                    />
+                </div>
             </div>
         </div>
     )
