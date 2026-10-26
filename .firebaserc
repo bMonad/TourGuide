@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "tourguide-8c872"
-  }
+    "default": "tourguide-8c872",
+    "TG": "tourguide-8c872"
+  },
+  "targets": {},
+  "etags": {}
 }

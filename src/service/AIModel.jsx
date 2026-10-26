@@ -7,7 +7,7 @@ async function main(promptText) {
         apiKey: import.meta.env.VITE_GEMINI_API_KEY,
     });
     const config = {};
-    const model = 'gemini-2.0-flash-lite';
+    const model = 'gemini-3.5-flash-lite';
     const contents = [
         {
             role: 'user',
