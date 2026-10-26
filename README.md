@@ -1,6 +1,6 @@
 # 🗺️ Tour Guide
 
-Tour Guide is a modern AI-powered travel planning web app built with React. It helps users discover destinations, generate personalized itineraries, and manage their trips with ease. The app leverages Google Places Autocomplete, Gemini GenAI, and Firebase to deliver a seamless and interactive travel experience.
+Tour Guide is a modern AI-powered travel planning web app built with React and Gemini model. It helps users discover destinations, generate personalized itineraries, and manage their trips with ease. The app leverages Google Places Autocomplete, Gemini GenAI, and Firebase to deliver a seamless and interactive travel experience.
 
 ---
 
@@ -160,6 +160,6 @@ This project is for educational and demonstration purposes.
 
 ---
 
-## 👨‍💻 Developed By: _Shivansh Singh_
+## 👨‍💻 Developed By: _Shivansh Singh bMonad_
 
 **Happy Travels! 🌍✈️**
