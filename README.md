@@ -160,6 +160,24 @@ This project is for educational and demonstration purposes.
 
 ---
 
-## 👨‍💻 Developed By: _Shivansh Singh bMonad_
+## Credits
 
-**Happy Travels! 🌍✈️**
+<div align="center">
+
+**Designed and developed by -** **[bMonad (Shivansh Singh)](https://github.com/bMonad)**
+  
+### Let's Build Something Meaningful 🚀
+
+</div>
+
+If you find this project useful or inspiring, consider giving the repo a star. You're welcome to use it as a reference for your own learning, but please don't copy it as-is. Make it your own.
+
+---
+
+<div align="center">
+
+**Shivansh Singh | bMonad** · Software Engineer · AI Engineer · React.js · Python · LangChain · Generative AI 
+
+Thank you for visiting this project!
+
+</div>
